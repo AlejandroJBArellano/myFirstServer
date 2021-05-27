@@ -18,8 +18,8 @@ app.use(router);
 //errors
 
 //static files = archivos front-end
-
-app.get(express.static(path.join(__dirname, "public")));
+// app.use(express.static("public"))
+app.use(express.static(path.join(__dirname, "public")));
 
 //start the server
 app.listen(app.get("port"), _=>console.log(`server on port ${app.get("port")}`));
