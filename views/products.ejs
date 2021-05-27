@@ -1,23 +1,18 @@
 <%- include("partials/head") %>
-    <section>
-        <article>
-            <ul>
-                <% for(var i = 0; i < items.length; i++) { %>
-                <li><%= items[i].name %></li>
-                <% } %>
-            </ul>
-            <h2>Add a new product</h2>
-        </article>
-        <article>
-            <form action="/new-product" method="POST">
-                <input type="text" name="newItem" id="newItem" required>
-                <button id="button">Añadir</button>
-            </form>
-        </article>
-    </section>
-    <script>
-        let input = document.getElementById("newItem")
-        input.focus()
-        document.getElementById("button").onclick = input.value === undefined ? alert("hace falta valor en el campo") : true
-    </script>
+        <section>
+            <article>
+                <ul>
+                    <% for(var i = 0; i < items.length; i++) { %>
+                    <li><%= items[i].name %></li>
+                    <% } %>
+                </ul>
+                <h2>Add a new product</h2>
+            </article>
+            <article>
+                <form action="/new-product" method="POST">
+                    <input type="text" name="newItem" id="newItem" required>
+                    <button id="button">Añadir</button>
+                </form>
+            </article>
+        </section>
 <%- include("partials/footer") %>
